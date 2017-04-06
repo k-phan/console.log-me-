@@ -1,0 +1,35 @@
+{
+  "name": "console.log-me-",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "debug": "^2.6.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-beta11",
+    "serve-favicon": "^2.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kphan95/console.log-me-.git"
+  },
+  "keywords": [
+    "personal",
+    "website",
+    "node"
+  ],
+  "author": "Khai Phan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kphan95/console.log-me-/issues"
+  },
+  "homepage": "https://github.com/kphan95/console.log-me-#readme"
+}
