@@ -11,7 +11,7 @@ body {
 	position: fixed;
 	top: 0;
 	border-style: solid;
-	border-width: 3px 0;
+	border-width: 2px 0;
 	border-color: #1aefb3;
 }
 
@@ -28,6 +28,30 @@ body {
 	text-align: center;
 	padding: 10px 0;
 }
+
+#drop-down {
+	text-decoration: underline;
+	display: none;
+}
+
+#drop-down-button {
+	position: fixed;
+	top: 14px;
+	right: 15px;
+	display: none;
+	font-weight: bold;
+	background-color: black;
+	color: white;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #1aefb3;
+	border-radius: 15%;
+}
+
+#drop-down-button:active {
+	background-color : #1aefb3;
+}
+
 
 .my-navbar-right {
 	float: right;
@@ -90,4 +114,52 @@ nav ul > li > a:visited, .my-navbar-brand > a:visited {
 
 .my-navbar-brand > a:hover {
 	text-transform: lowercase;
+}
+
+/* Overwrite Testing for Responsive Navbar */
+@media screen and (max-width: 935px) {
+	.my-navbar-left {
+		float: right;
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+
+	.my-navbar-brand {
+		width: 100%;
+		display: none;
+	}
+
+	#drop-down {
+		display: block;
+	}
+
+	#drop-down-button {
+		display: initial;
+	}
+
+	.my-navbar-right {
+		float: right;
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+
+	.nav-toggle {
+		display: none;
+	}
+
+	nav li {
+		margin: 0 30%;
+	}
+}
+
+@media screen and (min-width: 936px) {
+	.my-navbar-left {
+		display: inline-block !important;
+	}
+
+	.my-navbar-right {
+		display: inline-block !important;
+	}
 }

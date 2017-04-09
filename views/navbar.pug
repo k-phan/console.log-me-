@@ -1,16 +1,21 @@
 .my-navbar-container
   nav
-    ul.my-navbar-left
+    button(id='drop-down-button' onclick="toggle_menu('nav-toggle')") =
+    div(class='my-navbar-brand' id='drop-down')
+      a(href='/') Khaineki Ken
+
+    ul.my-navbar-left.nav-toggle
       li 
-        a(href='/#projects') .Projects
+        a(href='/') .Projects
       li
-        a(href='/#gallery') .Gallery
+        a(href='/') .Gallery
     
     .my-navbar-brand 
-      a(href='/#home') Khaineki Ken
+      a(href='/') Khaineki Ken
     
-    ul.my-navbar-right
+    ul.my-navbar-right.nav-toggle
       li 
-        a(href='/#about') .About
+        a(href='/') .About
       li 
-        a(href='/contact') .Contact
+        a(href='/') .Contact
+  script(src='/js/toggle-menu.js')
