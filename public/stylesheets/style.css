@@ -4,15 +4,17 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+/**
+ * NAVBAR CSS
+ */
+
 .my-navbar-container {
 	background: black;
 	width: 100%;
 	margin: 0 auto;
 	position: fixed;
 	top: 0;
-	border-style: solid;
-	border-width: 2px 0;
-	border-color: #1aefb3;
+	z-index: 1;
 }
 
 .my-navbar-left {
@@ -36,7 +38,7 @@ body {
 
 #drop-down-button {
 	position: fixed;
-	top: 14px;
+	top: 12px;
 	right: 15px;
 	display: none;
 	font-weight: bold;
@@ -51,7 +53,6 @@ body {
 #drop-down-button:active {
 	background-color : #1aefb3;
 }
-
 
 .my-navbar-right {
 	float: right;
@@ -116,8 +117,42 @@ nav ul > li > a:visited, .my-navbar-brand > a:visited {
 	text-transform: lowercase;
 }
 
-/* Overwrite Testing for Responsive Navbar */
-@media screen and (max-width: 935px) {
+/**
+ * CONTENT
+ */
+
+.content-container {
+	width: 84%;
+	margin: auto;
+	position: relative;
+	top: 105px;
+}
+
+/* CHANGE THIS SHITTY NAME */
+.test-align {
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+/* Construction */
+#construction {
+	width: 80%;
+	height: auto;
+}
+
+#landing-profile {
+	width: 80%;
+	height: auto;
+	border-radius: 50%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	margin-bottom: 30px;
+}
+
+/* Responsive Media Query */
+@media screen and (max-width: 947px) {
 	.my-navbar-left {
 		float: right;
 		width: 100%;
@@ -154,7 +189,7 @@ nav ul > li > a:visited, .my-navbar-brand > a:visited {
 	}
 }
 
-@media screen and (min-width: 936px) {
+@media screen and (min-width: 948px) {
 	.my-navbar-left {
 		display: inline-block !important;
 	}
