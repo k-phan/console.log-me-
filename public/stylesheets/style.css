@@ -198,3 +198,10 @@ nav ul > li > a:visited, .my-navbar-brand > a:visited {
 		display: inline-block !important;
 	}
 }
+
+@media screen and (max-width: 549px) {
+	#drop-down-button {
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+}
