@@ -201,7 +201,7 @@ nav ul > li > a:visited, .my-navbar-brand > a:visited {
 
 @media screen and (max-width: 549px) {
 	#drop-down-button {
-		padding-left: 2px;
-		padding-right: 2px;
+		padding-left: 4px;
+		padding-right: 4px;
 	}
 }
