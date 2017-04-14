@@ -118,7 +118,7 @@ nav ul > li > a:visited, .my-navbar-brand > a:visited {
 }
 
 /**
- * CONTENT
+ * Content Landing
  */
 
 .content-container {
@@ -128,8 +128,7 @@ nav ul > li > a:visited, .my-navbar-brand > a:visited {
 	top: 105px;
 }
 
-/* CHANGE THIS SHITTY NAME */
-.test-align {
+.cell-align {
 	text-align: center;
 	margin-top: auto;
 	margin-bottom: auto;
@@ -141,14 +140,53 @@ nav ul > li > a:visited, .my-navbar-brand > a:visited {
 	height: auto;
 }
 
-#landing-profile {
+#landing-image {
 	width: 80%;
 	height: auto;
 	border-radius: 50%;
 	border-style: solid;
 	border-color: black;
 	border-width: 3px;
-	margin-bottom: 30px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+/**
+ * Content Projects
+ */
+#proj-header {
+	text-align: center;
+	text-shadow: 2px 2px #1aefb3;
+	letter-spacing: 1px;
+}
+
+#proj-one-image {
+	width: 88%;
+	height: auto;
+	padding: auto;
+	margin: auto;
+	border-style: solid;
+	border-width: 7px;
+	border-radius: 5%;
+
+}
+
+.proj-slide-left {
+	width: 100%;
+}
+
+.proj-title, .proj-links {
+	text-align: center;
+}
+
+.proj-title, .proj-what, 
+.proj-why, .proj-where, .proj-links {
+	letter-spacing: 2px;
+}
+
+.proj-desc {
+	padding: 5px;
+	margin-bottom: 45px;
 }
 
 /* Responsive Media Query */
