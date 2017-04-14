@@ -19,7 +19,7 @@ router.get('/resume', function (req, res, next) {
 })
 
 router.get('/projects', function (req, res, next) {
-  return res.render('construction')
+  return res.render('projects')
 })
 
 router.get('/gallery', function (req, res, next) {
