@@ -189,6 +189,13 @@ nav ul > li > a:visited, .my-navbar-brand > a:visited {
 	margin-bottom: 45px;
 }
 
+#new-proj-butt {
+	font-size: 25px;
+	border-color: black;
+	background-color: #1aefb3;
+	border-radius: 5px 5px;
+}
+
 /* Responsive Media Query */
 @media screen and (max-width: 947px) {
 	.my-navbar-left {

@@ -7,8 +7,16 @@ var path = require('path')
 var bodyParser = require('body-parser')
 var favicon = require('serve-favicon')
 var debug = require('debug')('app')
+var mongoose = require('mongoose')
 
 var app = express()
+
+/**
+ * Connect to MongoDB
+ */
+
+app.db = require('./mongoose/connection')
+require('./models/projects')(app, mongoose)
 
 /**
  * View Engine Setup & Public Files & favicon

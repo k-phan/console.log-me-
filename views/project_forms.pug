@@ -1,0 +1,82 @@
+extends ./layouts/default
+
+block content
+  .content-container
+    .row
+      .twelve.columns.cell-align
+        h1 Add a New Project
+    form(id='new_proj_form' action='/projects/new' method='POST')
+      .row
+        .six.columns
+          label(for='title') Project Title
+          input(class='u-full-width' type='text' placeholder='Title' name='title')
+        .six.columns
+          label(for='password') Password
+          input(id='upload_pw' class='u-full-width' type='password' placeholder='Password' name='password')
+      br
+      .row
+        .twelve.columns
+          label(for='what-par1') What - Paragraph 1
+          textarea(class='u-full-width' placeholder='Description Here' style='resize:vertical' name='what1')
+      br
+      .row
+        .twelve.columns
+          label(for='what-par2') What - Paragraph 2
+          textarea(class='u-full-width' placeholder='Optional - Dependencies' style='resize:vertical' name='what2')
+      br
+      .row
+        .twelve.columns
+          label(for='why') Why
+          textarea(class='u-full-width' placeholder='Goal of Project' style='resize:vertical' name='why')
+      br
+      .row
+        .twelve.columns
+          label(for='setting') Where / When
+          textarea(class='u-full-width' placeholder='Time & Setting' style='resize:vertical' name='where')
+      br
+      .row
+        .six.columns
+          label(for='link-display') Link1
+          input(class='u-full-width' type='text' placeholder="Link's Display" name='linkname1')
+        .six.columns
+          label(for='link-path') Path1
+          input(class='u-full-width' type='text' placeholder='ex. https://...' name='linkpath1')
+      br
+      .row
+        .six.columns
+          label(for='link-display') Link2
+          input(class='u-full-width' type='text' placeholder="(Optional Link)" name='linkname2')
+        .six.columns
+          label(for='link-path') Path2
+          input(class='u-full-width' type='text' placeholder='(Optional Link)' name='linkpath2')
+      br
+      .row
+        .six.columns
+          label(for='link-display') Link3
+          input(class='u-full-width' type='text' placeholder="(Optional Link)" name='linkname3')
+        .six.columns
+          label(for='link-path') Path3
+          input(class='u-full-width' type='text' placeholder='(Optional Link)' name='linkpath3')
+      br
+      input(id='image_src' type='hidden' name='image_url')
+    form(id='get_creds')
+      .row
+        .twelve.columns
+          input(type="hidden" id="key" name="key")
+          input(type="hidden" id="acl" name="acl")
+          input(type="hidden" id="success_action_status" name="success_action_status")
+          input(type="hidden" id="policy" name="policy")
+          input(type="hidden" id="x-amz-algorithm" name="x-amz-algorithm")
+          input(type="hidden" id="x-amz-credential" name="x-amz-credential")
+          input(type="hidden" id="x-amz-date" name="x-amz-date")
+          input(type="hidden" id="x-amz-signature" name="x-amz-signature")
+          label(for='image') Upload Image
+          input(class='u-full-width' id='img_upload' type='file' accept='image/*' name='file')
+      br
+    .row
+      .twelve.columns.cell-align
+        button(id='new-proj-butt' type='submit' onclick='submit_project()') Submit
+    hr
+
+block script
+  script(src='/js/project-submit.js')

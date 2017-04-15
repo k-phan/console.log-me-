@@ -6,32 +6,40 @@ block content
       .twelve.columns#proj-header 
         h1 .PROJECTS
         hr
-    .proj-slide-left
-      .row
-        .twelve.columns.proj-title
-          h2 Sample Title
-      .row.proj-content
-        .one.columns
-        .six.columns
-          div(class='proj-desc')
-            .row
-              .twelve.columns.proj-what
-                h3 WHAT
-                p.
-            .row
-              .twelve.columns.proj-why
-                h3 WHY
-                p.
-            .row
-              .twelve.columns.proj-where
-                h3 WHEN / WHERE
-                p.
-        .four.columns.cell-align
-          img(id='proj-one-image')
-        .one.columns
-      .row
-        .twelve.columns.proj-links
-          h4 LINKS
-          p 
-            a(href='') Source Code
-      hr
+    - for(var i = projects.length-1; i >= 0; i--)
+        .proj-slide-left
+          .row
+            .twelve.columns.proj-title
+              h2= projects[i].title
+          .row.proj-content
+            .one.columns
+            .six.columns
+              div(class='proj-desc')
+                .row
+                  .twelve.columns.proj-what
+                    h3 WHAT
+                    - for(var j = 0; j < projects[i].what.length; j++)
+                        - if(projects[i].what[j] !== '')
+                            p= projects[i].what[j]
+                .row
+                  .twelve.columns.proj-why
+                    h3 WHY
+                    p= projects[i].why
+                .row
+                  .twelve.columns.proj-where
+                    h3 WHEN / WHERE
+                    p= projects[i].where
+            .four.columns.cell-align
+              img(id='proj-one-image' src=projects[i].image)
+            .one.columns
+          .row
+            .twelve.columns.proj-links
+              - if(projects[i].links.length > 0)
+                  h4 LINKS
+                  p
+                    - for(var j = 0; j < projects[i].links.length; j++)
+                        - if(projects[i].links[j].link !== '')
+                            - if(j !== 0) 
+                                |  | 
+                            a(href=projects[i].links[j].link)= projects[i].links[j].name
+        hr
