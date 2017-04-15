@@ -34,7 +34,7 @@ block content
             .one.columns
           .row
             .twelve.columns.proj-links
-              - if(projects[i].links[0] !== undefined & projects[i].links[0] !== null)
+              - if(projects[i].links[0] !== undefined && projects[i].links[0] !== null && projects[i].links[0] && projects[i].links[0].name != '')
                   h4 LINKS
                   p
                     - for(var j = 0; j < projects[i].links.length; j++)
